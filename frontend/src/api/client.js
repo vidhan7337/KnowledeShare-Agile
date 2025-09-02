@@ -12,7 +12,7 @@ export async function apiFetch(url, { method = 'GET', headers = {}, body, withAu
     ...(body ? { body: JSON.stringify(body) } : {})
   }
 
-  // If backend expects Authorization, use token stored in localStorage (compatibility)
+  //getting token from localstorage but we are using in cookies
   const token = localStorage.getItem('token')
   if (withAuth && token && !opts.headers['Authorization']) {
     opts.headers['Authorization'] = `Bearer ${token}`

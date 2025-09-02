@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 
-// Routes
+//Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/questions", questionRoutes);
 app.use("/api/answers", answerRoutes);
@@ -37,6 +37,7 @@ app.use((err, req, res, next) => {
     });
 });
 
+//Database Connection and listening to server
 connectDB()
     .then(() => {
         console.log('Connected to MongoDB');
