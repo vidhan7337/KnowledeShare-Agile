@@ -36,7 +36,6 @@ export default function Login() {
           <button className="btn btn-primary" type="submit">Login</button>
           <Link className="btn btn-link" to="/register">Create account</Link>
         </div>
-        <div className="form-text">This app supports cookie-based auth. Login should set a JWT cookie via Set-Cookie.</div>
       </form>
     </div>
   )
